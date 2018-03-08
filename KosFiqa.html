@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Rafiqa's Home</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var theAs = {lat: -7.552118, lng: 110.7710836};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: theAs
+        });
+        var marker = new google.maps.Marker({
+          position: theAs,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Tc8zGpt4R4hGKVszZMKMX8oq2toUcds&callback=initMap">
+    </script>
+  </body>
+</html>
